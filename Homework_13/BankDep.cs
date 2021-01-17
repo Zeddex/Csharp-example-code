@@ -5,6 +5,13 @@ using System.Text;
 
 namespace Homework_13
 {
+    public enum BankDepartment
+    {
+        IndividualBank,
+        BusinessBank,
+        VipBank
+    }
+
     public abstract class BankDep
     {
         public ObservableCollection<Client> Clients { get; set; }

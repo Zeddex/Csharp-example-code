@@ -73,6 +73,7 @@ namespace Homework_13
         public override int LoanRate { get; set; } = 15;
         public override int DepositRate { get; set; } = 5;
         public override string Status { get; set; } = "Individual";
+
         public Individual() : base($"Individual Client-{Guid.NewGuid().ToString().Substring(0, 5)}") {}
     }
 
@@ -81,6 +82,7 @@ namespace Homework_13
         public override int LoanRate { get; set; } = 10;
         public override int DepositRate { get; set; } = 10;
         public override string Status { get; set; } = "Business";
+
         public Business() : base($"Business Client-{Guid.NewGuid().ToString().Substring(0, 5)}") {}
     }
 
@@ -89,6 +91,7 @@ namespace Homework_13
         public override int LoanRate { get; set; } = 5;
         public override int DepositRate { get; set; } = 15;
         public override string Status { get; set; } = "VIP";
+
         public Vip() : base($"VIP Client-{Guid.NewGuid().ToString().Substring(0, 5)}") {}
     }
 
