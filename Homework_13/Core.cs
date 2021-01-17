@@ -41,20 +41,30 @@ namespace Homework_13
             // add individual clients to individual department
             for (int i = 0; i < individ; i++)
             {
-                bank[0].Clients.Add(new Individual());
+                CreateClientsCollection<Individual>((int)BankDepartment.IndividualBank);
             }
 
             // add business clients to business department
             for (int i = 0; i < business; i++)
             {
-                bank[1].Clients.Add(new Business());
+                CreateClientsCollection<Business>((int)BankDepartment.BusinessBank);
             }
 
             // add vip clients to vip department
             for (int i = 0; i < vip; i++)
             {
-                bank[2].Clients.Add(new Vip());
+                CreateClientsCollection<Vip>((int)BankDepartment.VipBank);
             }
+        }
+
+        /// <summary>
+        /// Add clients to bank departments
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="bankDep"></param>
+        void CreateClientsCollection<T>(int bankDep) where T : Client, new()
+        {
+            bank[bankDep].Clients.Add(new T());
         }
 
         /// <summary>
